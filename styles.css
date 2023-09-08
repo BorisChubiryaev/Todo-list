@@ -58,5 +58,10 @@ body {
 
 /* Добавляем стиль для выделенных чётных элементов */
 .todo-list__item--highlighted {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
+}
+
+.todo-list__item-text--completed {
+  text-decoration: line-through; /* Добавляем зачеркивание текста */
+  color: #aaa; /* Меняем цвет завершенных задач */
 }
