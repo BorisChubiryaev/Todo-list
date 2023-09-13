@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
     itemText.textContent = text;
 
     const completeButton = document.createElement("button");
-    completeButton.className = "todo-list__complete-button";
+    completeButton.className = "todo-list__complete-button button";
     completeButton.textContent = "Complete"; // Создаем кнопку "Complete" по умолчанию
 
     const deleteButton = document.createElement("button");
-    deleteButton.className = "todo-list__delete-button";
+    deleteButton.className = "todo-list__delete-button button";
     deleteButton.textContent = "Удалить";
 
     deleteButton.addEventListener("click", function () {
