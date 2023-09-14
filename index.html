@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./vendor/normalize.css" />
-    <title>Todo List</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <div class="todo-list">
-      <h1 class="todo-list__title">Список дел</h1>
-      <div class="todo-list__create">
-        <input
-          type="text"
-          class="todo-list__input"
-          placeholder="Введите новую задачу"
-        />
-        <button class="todo-list__add-button button">Добавить задачу</button>
-      </div>
+        <h1 class="todo-list__title">Список дел</h1>
+        <div class="todo-list__create">
+            <input
+                type="text"
+                class="todo-list__input"
+                placeholder="Введите новую задачу"
+            />
+            <button class="todo-list__add-button todo-list__button button">Добавить задачу</button>
+        </div>
+        <button class="todo-list__toggle-buttons-button todo-list__button button">Показать опции</button>
+        <div class="todo-list__toggle-buttons">
+            <button class="todo-list__highlight-button todo-list__button button">Выделить четные</button>
+            <button class="todo-list__highlight-odd-button todo-list__button button">Выделить нечетные</button>
+            <button class="todo-list__delete-first-button todo-list__button button">Удалить первый элемент</button>
+            <button class="todo-list__delete-last-button todo-list__button button">Удалить последний элемент</button>
+        </div>
 
-      <button class="todo-list__highlight-button button">
-        Выделить чётные
-      </button>
-      <button class="todo-list__highlight-odd-button button">
-        Выделить нечётные
-      </button>
-      <button class="todo-list__delete-last-button button">
-        Удалить последний элемент
-      </button>
-      <button class="todo-list__delete-first-button button">
-        Удалить первый элемент
-      </button>
-      <ul class="todo-list__items"></ul>
-
-      <ul class="todo-list__items"></ul>
+        <ul class="todo-list__items">
+            <!-- Добавьте элемент с классом "todo-list__no-tasks" для отображения надписи -->
+            <li class="todo-list__no-tasks">Сейчас нет задач</li>
+        </ul>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
