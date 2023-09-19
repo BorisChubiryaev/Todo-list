@@ -38,8 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Переключаем видимость блока с кнопками
     if (toggleButtons.style.display === "none") {
       toggleButtons.style.display = "block";
+      toggleButtonsButton.textContent = "Cкрыть опции";
     } else {
       toggleButtons.style.display = "none";
+      toggleButtonsButton.textContent = "Показать опции";
     }
   });
 
@@ -98,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const completeButton = document.createElement("button");
     completeButton.className = "todo-list__complete-button button";
     completeButton.textContent = "Выполнена";
+    completeButton.style.backgroundColor = "green";
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "todo-list__delete-button button";
@@ -109,16 +112,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     completeButton.addEventListener("click", function () {
-        if (completeButton.textContent === "Выполнена") {
-          itemText.classList.add("todo-list__item-text--completed");
-          completeButton.textContent = "Не выполнена";
-        } else {
-          itemText.classList.remove("todo-list__item-text--completed");
-          completeButton.textContent = "Выполнена";
-        }
-        itemList.appendChild(listItem);
-      });
-      
+      if (completeButton.textContent === "Выполнена") {
+        itemText.classList.add("todo-list__item-text--completed");
+        completeButton.textContent = "Не выполнена";
+        completeButton.style.backgroundColor = "red";
+      } else {
+        itemText.classList.remove("todo-list__item-text--completed");
+        completeButton.textContent = "Выполнена";
+        completeButton.style.backgroundColor = "green";
+      }
+      itemList.appendChild(listItem);
+    });
 
     listItem.appendChild(itemText);
     listItem.appendChild(completeButton);
