@@ -8,4 +8,4 @@
 
 # Ссылка на проект:
 
-https://borischubiryaev.github.io/Todo-list.CaseLab/
+https://borischubiryaev.github.io/Todo-list/
